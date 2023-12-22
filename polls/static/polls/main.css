@@ -1,0 +1,194 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #060606;
+  display: grid;
+  place-items: center;
+  color: rgb(201, 201, 216);
+}
+body .main_title {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+#cards {
+  width: 90%;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  height: 400px;
+  flex: 1 1 250px;
+  background-color: rgba(133, 129, 129, 0.12);
+  border-radius: 12px;
+  position: relative;
+}
+.card .fa-square-poll-vertical {
+  position: relative;
+  top: 1rem;
+}
+.card h4 {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  padding-top: 1.2rem;
+}
+.card .card_link {
+  position: absolute;
+  bottom: 1.5rem;
+}
+
+#cards:hover > .card {
+  background: radial-gradient(400px circle at var(--mouse-x0 var(--mouse-y), hsl(var(--color)/1), rgba(255, 255, 255, 0.12) 40%));
+}
+
+.card:nth-child(1) {
+  --color: 348 80% 60%;
+}
+
+.card:nth-child(2) {
+  --color: 0 0% 100%;
+}
+
+.card:nth-child(3) {
+  --color: 220 100% 35%;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+.card-content > i {
+  font-size: 10rem;
+  color: rgb(201, 201, 216);
+}
+.card-content > p {
+  color: rgb(201, 201, 216);
+}
+.card-content > a {
+  width: 90%;
+  padding-block: 0.8rem;
+  background-color: rgba(133, 129, 129, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+.card-content > a:hover {
+  background-color: rgba(20, 20, 20, 0.3);
+  transition: 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (width >= 1878px) {
+  #cards {
+    margin-top: -13rem;
+  }
+}
+form {
+  display: grid;
+  place-items: center;
+}
+
+fieldset {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+fieldset legend {
+  text-align: center;
+}
+fieldset .voting_place {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit_btn {
+  display: flex;
+  align-items: center;
+  color: rgb(201, 201, 216);
+  padding: 0 2rem 0 2rem;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: darkblue;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+}
+.submit_btn:hover {
+  background-color: rgb(23, 23, 119);
+  transition: 0.5s ease;
+}
+.submit_btn:hover {
+  color: rgb(175, 175, 182);
+}
+
+.back_btn {
+  display: flex;
+  align-items: center;
+  color: #0f0e0e;
+  padding: 0 2rem 0 2rem;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgb(201, 201, 216);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+}
+.back_btn:hover {
+  background-color: rgb(175, 175, 182);
+  transition: 0.5s ease;
+}
+
+.voting_place .voting_radios {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.vote_results {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+li::marker {
+  font-size: 1.65rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,43 @@
+@mixin submit-btn {
+    display: flex;
+    align-items: center;
+    color: $white;
+    padding: 0 2rem 0 2rem;
+    font: {
+        size: 14px;
+        weight: bold;
+    }
+    background-color: $submit-btn-bg;
+    width: fit-content;
+    height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    &:hover {
+        background-color: $submit-btn-hover-bg;
+        transition: 0.5s ease;
+    }
+}
+
+@mixin back-btn {
+    display: flex;
+    align-items: center;
+    color: $black-text;
+    padding: 0 2rem 0 2rem;
+    font: {
+        size: 14px;
+        weight: bold;
+    }
+    background-color: $white;
+    width: fit-content;
+    height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    &:hover {
+        background-color: $white-hover;
+        transition: 0.5s ease;
+    }
+}

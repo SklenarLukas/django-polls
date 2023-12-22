@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background-color: $body-bg;
+    display: grid;
+    place-items: center;
+    color: $white;
+    .main_title {
+        font: {
+            size: 70px;
+            weight: bold;
+        }
+    }
+}
+
+#cards {
+    width: 90%;
+    padding-inline: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    height: 400px;
+    flex: 1 1 250px;
+    background-color: $card-bg;
+    border-radius: 12px;
+    position: relative;
+    .fa-square-poll-vertical {
+        position: relative;
+        top: 1rem;
+    }
+    h4 {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        padding-top: 1.2rem;
+    }
+    .card_link {
+        position: absolute;
+        bottom: 1.5rem;
+    }
+}
+
+#cards:hover > .card {
+    background: radial-gradient(
+        400px circle at var(--mouse-x0 var(--mouse-y), hsl(var(--color) / 1), rgba(255, 255, 255, 0.12) 40%)
+    );
+}
+
+.card:nth-child(1) {
+    --color: 348 80% 60%;
+}
+
+.card:nth-child(2) {
+    --color: 0 0% 100%;
+}
+
+.card:nth-child(3) {
+    --color: 220 100% 35%;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+
+    > i {
+        font-size: 10rem;
+        color: $white;
+    }
+    > p {
+        color: $white;
+    }
+    > a {
+        width: 90%;
+        padding-block: 0.8rem;
+        background-color: $card-bg;
+        border: 1px solid $card-border;
+        border-radius: 6px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        z-index: 10;
+        &:hover {
+            background-color: $card-link-hover;
+            transition: 0.5s ease;
+            border: 1px solid $card-border-hover;
+        }
+    }
+}
+
+@media (width >= 1878px) {
+    #cards {
+        margin-top: -13rem;
+    }
+}
